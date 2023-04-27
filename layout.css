@@ -40,7 +40,7 @@ nav a:after {
   background-color: crimson;
   transform: scaleX(0);
   transform-origin: left;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s ease-out;
 }
 
 nav a:hover:after {
@@ -93,3 +93,28 @@ h2 {
 blockquote {
   padding: 1rem;
 }
+
+/* alternative animation solution */
+
+/* .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+ 
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: crimson;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+  }
+ 
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  } */
