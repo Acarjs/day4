@@ -1,32 +1,95 @@
 html {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 main {
-    width: 75vw;
-    margin: 0 auto;
+  width: 75vw;
+  margin: 0 auto;
 }
 
 header {
-    width: 75vw;
-    text-align: center;
-    margin: 0 auto;
-    padding: 1rem;
+  width: 75vw;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  color: crimson;
+  text-decoration: none;
+}
+
+nav a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: crimson;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover:after {
+  transform: scaleX(1);
+  width: 100%;
+}
+
+nav a:hover {
+  cursor: pointer;
+}
+
+.about {
+  background: #eaeaea;
+}
+
+.users span {
+  font-weight: bold;
+}
+
+.users span:nth-child(2) {
+  color: crimson;
+}
+
+.creators a:nth-child(odd) {
+  font-family: "Lato", serif;
+  text-decoration: none;
+}
+
+.creators a:nth-child(even) {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.cta h2 {
+  color: crimson;
+  font-family: "Lato", serif;
+}
+
+.cta ul li:nth-child(odd) {
+  text-decoration: underline;
 }
 
 h2 {
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 blockquote {
-    padding: 1rem;
+  padding: 1rem;
 }
